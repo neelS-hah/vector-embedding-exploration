@@ -1,37 +1,38 @@
-## Welcome to GitHub Pages
+## What Really is Malware and Why Shouldn't I be Clicking on that Link? 
+Topic 1 - Introduce how users encounter malware in their day to day. Make the probelm relatable. 
 
-You can use the [editor on GitHub](https://github.com/neelS-hah/vector-embedding-exploration/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+--> Include picture/plot that shows scale of the problem at hand 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Explain through the lens of android applications since that's how the problem is set up. (Emphasize why the reader should care?)
 
-### Markdown
+The above should serve as a hook. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Topic 2 - Introduce specific and driven problem statement. Along with the idea that this project takes an NLP driven approach to analyzing the problem.
 
-```markdown
-Syntax highlighted code block
+## Overall Approach 
+Topic 1 - Why our skillset is applicable for this project. Intended audience industry professionals.
 
-# Header 1
-## Header 2
-### Header 3
+Topic 2 - Define inspiration for merging discplines of core ML for malware detections as opposed to the idea of treating it more linguistically. 
 
-- Bulleted
-- List
+## How Does One Even Access Malware Applications?
+Topic 1 - This serves as our informal introduction to the project data. What it contains and how it also serves as training and testing data for further ML explorations
 
-1. Numbered
-2. List
+Topic 2 - A light explaination on procedure and what it took to pre-process the data
 
-**Bold** and _Italic_ and `Code` text
+## A Story About Malware 
+Topic 1 - Extracted findings from the EDA, trends of our dataset and other statistics that are derived from the dataset. 
 
-[Link](url) and ![Image](src)
-```
+This section will include plots and images to help understand the findings of our EDA, maybe a graph plot of all the api's and apps and their relations
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Build the plot for the website to extend the understanding to current and state of the art for malware detection, what's currently used and what NLP techniques are proposed - Node2vec, MetaPath2Vec, Word2vec
 
-### Jekyll Themes
+Note - Will spend the most time explaining word2vec through examples and then using a related example for API's and Applications. 
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/neelS-hah/vector-embedding-exploration/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+## Our Results, Findings and Interesting Observations
+Note - will provide hyperlinks and github repo references for technical aspects such as hyperparameters and model choice, although this section will speak through plotly graphs of how the two classes are divided through vetor embeddings and further analysis that's conducted through them. 
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Will have a couple tables comparing success(or not) of ML model choices and techniques. Will also reference hindroid and how that project served to be the setting for everything that follows here (along with the hindroid results)
+
+
+
