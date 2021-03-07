@@ -32,18 +32,21 @@ To visualize the Embedding Techniques,
 2. Then we visualize the high-dimension vector using scipy.TSNE, which allowed us to reduce the dimension of the vector embeddings to 2. So, we can visualize the vectors in a 2-D graph.
 3. (For further work, we are going to explore if we can successfully classify benign apps and malware apps from the embedding vectors using SVM models.)
 
-### Word2vec:
+#### Word2vec:
 （pic)
-### Node2Vec:
+#### Node2Vec:
 (pic)
 (pic)
 ## Graph Embedding Techniques
 ### Word2Vec
 Word2Vec is one of the most popular techniques to learn word embeddings using a shallow neural network, developed by Tomas Mikolov in 2013 at Google.  Word2vec learns the association among words from a large corpus of text, and it could be used to find synonymous words or suggest an additional word for an incomplete sentence using Skip Gram or Common Bag Of Words (CBOW).
 
-For this particular analysis, we constructed a graph traversal for the word to vector embeddings using the APA relationship. This is connecting an application and api in addition to the api calls that occur in similar packages and their corresponding applications. This allows us to pierce through the relationships of malware and benign applications.
+For this particular analysis, we constructed a graph traversal for the word to vector embeddings using the APA relationship. An APA relationship is a meta-path: App→(contains)API→(same package name)API→(contains-1)APP. In this relationship, we are not only calculating the similarity of APIs between 2 APPs, but also calculating if the APIs are from the same package. After this, we can then use the dot product to calculate the similarity.
+
+It’s is connecting an application and api in addition to the api calls that occur in similar packages and their corresponding applications. This allows us to pierce through the relationships of malware and benign applications. 
 
 This relationship is expressed as embeddings which we then visualize on the 2-Dimensional plane to further use clustering techniques to classify the application types. 
+
 
 ### Node2Vec
 Node2vec is an algorithmic framework for representational learning on graphs. Given any graph, it can learn continuous feature representations for the nodes, which can then be used for various downstream machine learning tasks.
@@ -55,8 +58,11 @@ The purpose of random walks are to add context to the Application → API nodes,
 
 In the figure under node2vec above we clearly see the distinction between the two classes. On visualizing this on a 2-Dimensional plane it is now possible to use lighter classification models to help classify benign vs malware applications.
 
-#### Metapath2Vec
-TBC
+### Metapath2Vec
+Comparing to Word2Vec and Node2Vec which use homogeneous graph networks, Metapath2Vec uses heterogeneous graph networks. Heterogeneous graph networks allow us to distinguish different types of nodes and edges(relationship). In our case, using heterogeneous graph networks enable us to see the difference between API and APP nodes. 
+
+On the other hand, similar to Node2Vec, Metapath2Vec takes random walks to “construct the heterogeneous neighborhood of a node” and then uses “a heterogeneous skip-gram model to perform node embeddings.”6 
+
 ## Conclusion
 
 
