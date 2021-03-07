@@ -9,15 +9,31 @@ There are more technologies that could identify Malware. Thus, we decided to ext
 
 ## Data Exploration
 ### Data Collection
+The data(source code) for identifying malware is primarily the android play store, although in order to obtain the respective APK’s for these apps the data is directly downloaded from ‘https://apkpure.com/’. Nonetheless, the code that directly downloaded cannot be interpreted by us directly.
+
+Thus, this data is then unpackaged using the apktools library that allows us to view the subsequent smali code (a code that humans can interpret) and app binaries. The smali code and app binaries contain a lot of the information derived from the Java source code that allows us to map the number of API calls and the relationships between them. 
+
+We extracted the datasets of the source code of each app from our section resource, which includes a total of 300 apps. The benign apps are picked randomly. For the malware apps, we specifically picked malware apps that are type Anup and RuMMS. More datasets and EDA of the datasets will be included in the future to achieve a more accurate and convincing result. 
 ### Data Processing and Cleaning 
-Topic 1 - Why our skillset is applicable for this project. Intended audience industry professionals.
+Each app has multiple files and folders, offering a large amount of code to be processed. We walked through each .smali file to collect the features we need.
+
+1. We select API calls and dissect them into different parts: API itself, code block, and package. 
+(pic)
+2. Then, we use these parts to create matrices of A, B, and P.
+(pic)
+3. Based on the matrices, we explored meta path AA^T, ABA^T, APA^T, and APBP^TA^T, and used multi-kernel learning to compute the similarities.
+(pic)
 
 Topic 2 - Define inspiration for merging discplines of core ML for malware detections as opposed to the idea of treating it more linguistically. 
 
-## How Does One Even Access Malware Applications?
-Topic 1 - This serves as our informal introduction to the project data. What it contains and how it also serves as training and testing data for further ML explorations
+## Vector Embedding Analysis and Exploration
+To visualize the Embedding Techniques, 
+1. we imported gensim.models.keyedvectors to vectorize the apps
+2. Then we visualize the high-dimension vector using scipy.TSNE, which allowed us to reduce the dimension of the vector embeddings to 2. So, we can visualize the vectors in a 2-D graph.
+3. (For further work, we are going to explore if we can successfully classify benign apps and malware apps from the embedding vectors using SVM models.)
 
-Topic 2 - A light explaination on procedure and what it took to pre-process the data
+### Word2vec:
+（pic)
 
 ## A Story About Malware 
 Topic 1 - Extracted findings from the EDA, trends of our dataset and other statistics that are derived from the dataset. 
