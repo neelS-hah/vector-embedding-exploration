@@ -7,7 +7,9 @@ Through the replication study of HinDroid from last quarter, we learned that Hin
 There are more technologies that could identify Malware. Thus, we decided to extend from what we’ve done for the replication and explore techniques to detect Android malware using Heterogeneous Graph. The techniques include Word2vec, Node2vec, and Metapath2vec. For a successful project, we are aiming to have an evaluation of each Graph Embedding Techniques and picking the best model.
 
 
-## Overall Approach 
+## Data Exploration
+### Data Collection
+### Data Processing and Cleaning 
 Topic 1 - Why our skillset is applicable for this project. Intended audience industry professionals.
 
 Topic 2 - Define inspiration for merging discplines of core ML for malware detections as opposed to the idea of treating it more linguistically. 
