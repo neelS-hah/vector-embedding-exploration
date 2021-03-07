@@ -1,13 +1,11 @@
-## What Really is Malware and Why Shouldn't I be Clicking on that Link? 
- - Introduce how users encounter malware in their day to day. Make the probelm relatable. 
+## Introduction 
+ 
+By July 2020, Android OS is still a leading mobile operating system that holds 74.6% of the market share worldwide, attracting numerous crazy cyber-criminals who are targeting the largest crowd.¹ Also, due to its open-resource feature and flexible system updating policy, it is 50 times more likely to get infected compared to ios systems.² Thus, developing a strong malware detection system becomes the number one priority.
 
---> Include picture/plot that shows scale of the problem at hand 
+Through the replication study of HinDroid from last quarter, we learned that HinDroid is an excellent technology for identifying malware. As other malware detection system simply use Application Programming Interface (API) calls, HinDroid further analyzes the relationship between API calls and higher-level semantics which raise the threshold for attackers.3 It is the first work to use Heterogeneous Information Network for Android Malware Detection.3
 
-Explain through the lens of android applications since that's how the problem is set up. (Emphasize why the reader should care?)
+There are more technologies that could identify Malware. Thus, we decided to extend from what we’ve done for the replication and explore techniques to detect Android malware using Heterogeneous Graph. The techniques include Word2vec, Node2vec, and Metapath2vec. For a successful project, we are aiming to have an evaluation of each Graph Embedding Techniques and picking the best model.
 
-The above should serve as a hook. 
-
-Topic 2 - Introduce specific and driven problem statement. Along with the idea that this project takes an NLP driven approach to analyzing the problem.
 
 ## Overall Approach 
 Topic 1 - Why our skillset is applicable for this project. Intended audience industry professionals.
