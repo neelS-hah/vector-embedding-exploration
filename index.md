@@ -1,5 +1,5 @@
 ## What Really is Malware and Why Shouldn't I be Clicking on that Link? 
-Topic 1 - Introduce how users encounter malware in their day to day. Make the probelm relatable. 
+ - Introduce how users encounter malware in their day to day. Make the probelm relatable. 
 
 --> Include picture/plot that shows scale of the problem at hand 
 
