@@ -141,8 +141,8 @@ Then we use k-means clustering method to classify the apps from malware to benig
 
 
 Here is the accurate plot differentiating malware from benign apps:
-<p style="text-align:center;"><img src="/Assets/images/n2v_act.png" width="500" /> </p>
 
+<img src="/Assets/images/n2v_act.png" width="1000" /> 
 
 
 Comparing the plots, we can see that k-means clustering provides insight into the natural clusters of the graph. As all the k-means clustering separates clusters horizontally, we can assume that more than 50% of APPs are misclassified. Misclassifying malware as a benign app could cause a huge loss, so K-means clustering isn’t a good algorithm for detecting malware.
