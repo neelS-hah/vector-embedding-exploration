@@ -32,12 +32,13 @@ The scale at which each application had API calls was approximately of the order
 The API call itself provides an array of information to be able to organize the relationships between API’s and Applications in their respective matrices. 
 
 ![image](Assets/images/features.png)
+![image](Assets/images/api calls.png)
 
 #### Constructing Adjacency Matrices
 To help highlight APP → API relationships, we created 3 adjacency matrices. 
 Below are the three matrices and their contents. 
 
-(pic)
+![image](Assets/images/matrices.png)
 
 Based on the matrices, we explored meta path AA^T, ABA^T, APA^T, and APBP^TA^T, and used multi-kernel learning to compute the similarities.
 
@@ -48,15 +49,15 @@ To visualize the Embedding Techniques,
 3. (For further work, we are going to explore if we can successfully classify benign apps and malware apps from the embedding vectors using SVM models.)
 
 ### 3.1 Word2vec:
-（pic)
+![image](Assets/images/w2v_indi.png)
 ### 3.2 Node2Vec:
-(pic)
+![image](Assets/images/n2v_indi.png)
 The graph above shows the distribution of each app from graph embedding. A dot represents an app in the graph
 Then we use k-means clustering method to classify the apps from malware to benign apps. The graph below shows the result when k = 2, k=3, and k=4.(see pics below)
 
-(pic)
+![image](Assets/images/c2.png)![image](Assets/images/c3.png)![image](Assets/images/c4.png)
 Here is the accurate plot differentiating malware from benign apps:
-(pic)
+![image](Assets/images/n2v_act.png)
 
 Comparing the plots, we can see that k-means clustering isn’t a good model to predict the malware. As all the k-means clustering separates clusters horizontally, we can assume that more than 50% APPs are misclassified. Misclassifying a malware as a benign app could cause huge loss, so K-means clustering isn’t a good algorithm for detecting malware.
 
