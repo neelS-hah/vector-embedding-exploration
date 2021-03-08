@@ -32,7 +32,7 @@ The scale at which each application had API calls was approximately of the order
 The API call itself provides an array of information to be able to organize the relationships between API’s and Applications in their respective matrices. 
 
 ![image](Assets/images/features.png)
-![image](Assets/images/api calls.png)
+![image](Assets/images/api_calls.png)
 
 #### Constructing Adjacency Matrices
 To help highlight APP → API relationships, we created 3 adjacency matrices. 
