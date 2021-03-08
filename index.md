@@ -82,11 +82,12 @@ Below we see an unsupervised k-means classification into clusters of the APA and
 
 ![image](Assets/images/wc2.png)![image](Assets/images/wc3.png)
 | Meta-Path Walks | Walk Length | Accuracy | F1 Score |
-| ------------- | ------------- | ------------- | ------------- |
+| -- | --| - | -- |
 | APA  | 100 | 95% | 0.94 |
 | APA  | 20  | 87% | 0.78 |
 | APBPA | 100 | 91% | 0.93 |
 | APBPA | 20 | 83% | 0.82 |
+
 Below we see the 2D representation of the vector embeddings with the benign and malware classes being differentiated. 
 
 ![image](Assets/images/w2v_act.png)
