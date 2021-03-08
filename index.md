@@ -133,7 +133,13 @@ On running the model and creating sentences the graph below shows the distributi
 
 Then we use k-means clustering method to classify the apps from malware to benign apps. The graph below shows the result when k = 2, k=3, and k=4.(see pics below)
 
-![image](Assets/images/c2.png)![image](Assets/images/c3.png)![image](Assets/images/c4.png)
+<p float="center">
+  <img src="/Assets/images/c2.png" width="330" />
+  <img src="/Assets/images/c3.png" width="330" /> 
+  <img src="/Assets/images/c4.png" width="330" /> 
+</p>
+
+
 Here is the accurate plot differentiating malware from benign apps:
 ![image](Assets/images/n2v_act.png)
 
