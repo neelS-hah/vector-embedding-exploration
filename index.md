@@ -79,8 +79,9 @@ Walk Length - We found the walk length to be integral to correctly chain the rig
 Choice of Meta Path - Through experimentation we found disparate predictive accuracies and correlated classification scores through different meta-paths to form chains of APP → API relationships. For this particular subset of applications and given the equal class balance of benign apps to malware applications we found the meta paths APA and APBPA gave us the closest performance to the performance benchmark of HinDroid. The first visualization of vector embeddings is using the APA meta_path and a longer walk length, while the second one is using APBPA and a shorter walk length. Although using APA and a longer walk length resulted in the highest accuracies for our training and testings set. 
 
 Below we see an unsupervised k-means classification into clusters of the APA and APBPA walks respectively. 
+
 :-------------------------:|:-------------------------:
-![image](Assets/images/wc2.png) |  ![image](Assets/images/wc3.png)
+![](Assets/images/wc2.png) |  ![](Assets/images/wc3.png)
 
 | Meta-Path Walks | Walk Length | Accuracy | F1 Score |
 | -- | --| - | -- |
