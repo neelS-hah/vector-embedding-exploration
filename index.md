@@ -31,7 +31,7 @@ The scale at which each application had API calls was approximately of the order
 
 The API call itself provides an array of information to be able to organize the relationships between API’s and Applications in their respective matrices. 
 
-![image](/Assets/images/features.png)
+![image](/Assets/images/features.PNG)
 
 ## Vector Embedding Analysis and Exploration
 To visualize the Embedding Techniques, 
