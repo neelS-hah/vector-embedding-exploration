@@ -1,30 +1,37 @@
-## Introduction 
+## Abstract
+
+The Android app store and its open source features make it extremely vulnerable to malicious software, known as Malware. The current state of the art encompasses the use of advanced code analysis and corresponding machine learning models. Although along our initial research we found that the Applications in the Android app store along with their corresponding API calls behave a lot like a language.They have their comparable own syntax, structure and grammar. This inspired us to use techniques from Natural Language Processing(NLP) and use the same idea of creating graphical relationships between applications and api's. Additionally, we also show that the use of these graphical embeddings maintains the integrity of classification metrics to even correctly identify and differential Malware and Benign applications. 
+
+## 1. Introduction 
  
-By July 2020, Android OS is still a leading mobile operating system that holds 74.6% of the market share worldwide, attracting numerous crazy cyber-criminals who are targeting the largest crowd.¹ Also, due to its open-resource feature and flexible system updating policy, it is 50 times more likely to get infected compared to ios systems.² Thus, developing a strong malware detection system becomes the number one priority.
+By July 2020, Android OS is still a leading mobile operating system that holds 74.6% of the market share worldwide, attracting numerous cyber-criminals who are targeting the largest crowd.¹ The current state of the art of Malware detection uses machine learning models built of static syntactic relationships between the codebase and corresponding API calls. 
 
-Through the replication study of HinDroid from last quarter, we learned that HinDroid is an excellent technology for identifying malware. As other malware detection system simply use Application Programming Interface (API) calls, HinDroid further analyzes the relationship between API calls and higher-level semantics which raise the threshold for attackers.3 It is the first work to use Heterogeneous Information Network for Android Malware Detection.3
+A great baseline for models currently used is the Hindroid implementation. As other malware detection system simply use Application Programming Interface (API) calls, HinDroid further analyzes the relationship between API calls and higher-level semantics which raise the threshold for attackers.3 A prime example of using Heterogeneous Information Network for Android Malware Detection.3
 
-There are more technologies that could identify Malware. Thus, we decided to extend from what we’ve done for the replication and explore techniques to detect Android malware using Heterogeneous Graph. The techniques include Word2vec, Node2vec, and Metapath2vec. For a successful project, we are aiming to have an evaluation of each Graph Embedding Techniques and picking the best model.
+Initial analysis and research from the Heterogeneous Networks made it more apparent that the relationships between API’s and applications were closely modelled to languages. They had their own syntax, structure and semantics. Thus these relationships were further analyzed in order to use Natural Language Processing (NLP) techniques to further form relationships and classify Malware and Benign applications. 
 
+With the core idea to map out relationships using language models this paper explores a handful of vectorization and embedding techniques to accurately form information chains across the data. In particular, we explore Word2vec, Node2vec and Metapath2vec in depth and discuss other advanced implementations. 
 
-## Data Exploration
-### Data Collection
-The data(source code) for identifying malware is primarily the android play store, although in order to obtain the respective APK’s for these apps the data is directly downloaded from ‘https://apkpure.com/’. Nonetheless, the code that directly downloaded cannot be interpreted by us directly.
+## 2. Data Exploration
+### 2.1 Data Collection
+#### Data Source
+In order to accurately map relationships between API’s the applications from the Android Play Store are reduced to a version of assembly code for Java based applications called Dalvik bytecode. The APK’s that contain the smali code are directly downloaded from ‘https://apkpure.com/’ and compiled into .Smali files using the apktools library.
 
+#### Data Extraction
 Thus, this data is then unpackaged using the apktools library that allows us to view the subsequent smali code (a code that humans can interpret) and app binaries. The smali code and app binaries contain a lot of the information derived from the Java source code that allows us to map the number of API calls and the relationships between them. 
 
-We extracted the datasets of the source code of each app from our section resource, which includes a total of 300 apps. The benign apps are picked randomly. For the malware apps, we specifically picked malware apps that are type Anup and RuMMS. More datasets and EDA of the datasets will be included in the future to achieve a more accurate and convincing result. 
-### Data Processing and Cleaning 
-Each app has multiple files and folders, offering a large amount of code to be processed. We walked through each .smali file to collect the features we need.
+#### Data Categories 
+We extracted the datasets of the source code of each app from our section resource, which includes a total of 800 apps. The benign apps are picked randomly. For the malware apps, we specifically picked malware apps that are type Anup and RuMMS. 
 
-1. We select API calls and dissect them into different parts: API itself, code block, and package. 
-(pic)
-2. Then, we use these parts to create matrices of A, B, and P.
-(pic)
-3. Based on the matrices, we explored meta path AA^T, ABA^T, APA^T, and APBP^TA^T, and used multi-kernel learning to compute the similarities.
-(pic)
+RuMMS is a type of SMS Phishing malware that has gained popularity in recent years, while some of the others were chosen randomly from a set of Malware types. The intention behind this was to accurately identify through embeddings the presence of varied Malware genres.
 
-Topic 2 - Define inspiration for merging discplines of core ML for malware detections as opposed to the idea of treating it more linguistically. 
+
+### 2.2 Exploring Data 
+The scale at which each application had API calls was approximately of the order of O(N2). Thus across a large variety of applications there were approximately 24 Million API Calls that needed to be handled. To correctly evaluate the scale the API’s were analyzed at scale, some of these findings resulted in resorting to Vectorization and API Reduction techniques. 
+
+The API call itself provides an array of information to be able to organize the relationships between API’s and Applications in their respective matrices. 
+
+![image](/assets/images/features.jpg)
 
 ## Vector Embedding Analysis and Exploration
 To visualize the Embedding Techniques, 
