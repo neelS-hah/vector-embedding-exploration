@@ -83,7 +83,7 @@ Below we see an unsupervised k-means classification into clusters of the APA and
 
 This will display the three images side by side if the images are not too wide.
 
-<p float="left">
+<p float="center">
   <img src="/Assets/images/wc2.png" width="50%" />
   <img src="/Assets/images/wc3.png" width="50%" /> 
 </p>
