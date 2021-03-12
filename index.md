@@ -10,7 +10,7 @@
 | [ -- 3.3 Metapath2vec](#33-metapath2vec)|
 | [4. Future Research](#4-future-research)|
 | [5. Conclusion](#5-conclusion)|
-| [6.Additional Information](6-additional-information)|
+| [6.Additional Information](#6-additional-information)|
 
 ## 1. Introduction 
  
