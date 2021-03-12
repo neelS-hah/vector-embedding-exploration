@@ -80,7 +80,9 @@ It is often easy to forget while analyzing and writing code, that at the end of 
 ## 6. Additional Information
 
 <a href="https://BorealBlizzard.github.io/page1.html/">Video Link to Our Presentation</a>
+
 <a href="https://docs.google.com/document/d/1U0hxHL5boiFmCqgYs3B9EHoWOfzfpN6Px0at1zw71rI/edit">Link to Our Report</a>
+
 <a href="https://www.cse.ust.hk/~yqsong/papers/2017-KDD-HINDROID.pdf">Link to Further Read about Hindroid</a>
 
 
