@@ -2,7 +2,7 @@
 
 | Table of Content | 
 | ---------------------------------- |
-| [1. Introduction](#introduction)|
+| [1. Introduction](#1-introduction)|
 | [2. Data Exploration](#data-exploration) |
 | [3. Graph Embedding Techniques](#3.Graph-Embedding-Techniques)|
 | [ -- 3.1 Introduction](#3.1-Word2vec)|
