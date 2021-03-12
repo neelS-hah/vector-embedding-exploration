@@ -1,7 +1,7 @@
 # Overview
 
 | Table of Content | 
-| -- |
+| -------------------------------------------------------------- |
 | [1. Introduction](#1.-Introduction)|
 | [2. Data Exploration](#2.-Data-Exploration) |
 | [3. Graph Embedding Techniques](#3.Graph-Embedding-Techniques)|
