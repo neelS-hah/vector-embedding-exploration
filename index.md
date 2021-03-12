@@ -72,96 +72,25 @@ As a baseline model for all the subsequent research, we picked the HinDroid mode
 Now that we’ve established base relationships across Apps and APIs through various adjacency matrices and baseline models. To better understand the relationships between API calls, and their subsequent properties we explore them through Graph Networks, their ability to learn and traverse, and the corresponding vectorized embeddings. 
 
 ### 3.1 Word2vec:
-[Word2Vec](./w2v.md)
-#### Introduction - 
 
 Word2Vec is one of the most popular techniques to learn word embeddings using a shallow neural network, developed by Tomas Mikolov in 2013 at Google.  Word2vec learns the association among words from a large corpus of text, and it could be used to find synonymous words or suggest an additional word for an incomplete sentence using Skip Gram or Common Bag Of Words (CBOW).
+[Go to Word2Vec](./w2v.md)
 
 ### 3.2 Node2Vec:
-[Node2Vec](./n2v.md)
-#### Introduction - 
 
 Node2vec is an algorithmic framework for representational learning on graphs. Given any graph, it can learn continuous feature representations for the nodes, which can then be used for various downstream machine learning tasks.
 
 Compared to the simple graph we have for Word2Vec, Node2vec can be applied to complexly structured graphs that are " (un)directed, (un)weighted, or (a)cyclic." To accomplish that, Node2vec generates biased random walks from each node of the graph. This provides a way of balancing the exploration-exploitation tradeoff by smoothly interpolating between BFS and DFS.
 
-#### Implementation -
-
-Using random walks through the corpus, we created multiple documents as an input into the Gensim model for vectorizing embeddings using sentences. These embeddings were then analyzed using their corresponding graph clusters. 
-
-The purpose of random walks is to add context to the Application → API nodes, by looking at corresponding applications or APIs that are neighbors to the starting applications. 
-
-In the figure under node2vec above we clearly see the distinction between the two classes. On visualizing this on a 2-Dimensional plane it is now possible to use lighter classification models to help classify benign vs malware applications.
-
-#### Analysis - 
-
-Similar to node2vec, a distinct number of hyperparameters and model choices influenced the project. 
-
-The following are a few hyperparameters that had a large impact on the performance of the model - 
- - Walk length: The count of nodes in each random walk 
- - P: Return hyperparameter - controlling the probability of going back to a previous node
- - Q: Input hyperparameter - controlling the probability to traverse to undiscovered parts of the graph 
-
-For node2vec, these parameters above greatly influence the sampling strategy and how specific they’re intended to be.
-
-Since the risk factor for misclassifying a malware app as benign is considerably high, we started testing the model and embeddings with a lower probability of backtracking or exploring different parts of the graph. Thus the window size of 2 and 1 respectively. 
- 
-On running the model and creating sentences the graph below shows the distribution of each app from a 2D representation of the graph embeddings. A point represents an app in the graph.
-
-![image](Assets/images/n2v_indi.png)
-
-Then we use k-means clustering method to classify the apps from malware to benign apps. The graph below shows the result when k = 2, k=3, and k=4.(see pics below)
-
-<p float="left">
-  <img src="Assets/images/c2.png" width="330" />
-  <img src="Assets/images/c3.png" width="330" /> 
-  <img src="Assets/images/c4.png" width="330" /> 
-</p>
-
-
-Here is the accurate plot differentiating malware from benign apps:
-
-<img src="Assets/images/n2v_act.png" width="1000" /> 
-
-Comparing the plots, we can see that k-means clustering provides insight into the natural clusters of the graph. As all the k-means clustering separates clusters horizontally, we can assume that more than 50% of APPs are misclassified. Misclassifying malware as a benign app could cause a huge loss, so K-means clustering isn’t a good algorithm for detecting malware.
-Looking at the second graph, we see a distinct boundary between the application types. Further analysis would look at different meta paths that could better identify this boundary in addition to classifiers to elevate the creation of decision boundaries.
-
-On evaluating multiple classification models for Node2vec we found that Support Vector Machines provided us with the optimal Accuracy and recall tradeoff. We used Support Vector machines with the radial bias function(RBF) kernel, along with a higher than default regularization constant of 5. 
-Performance of Node2Vec embeddings using an SVC - 
-
-
-|P| Q | Walk Length | Accuracy | F1 Score |
-| -- | -- | --| -- | -- |
-| 2 | 1 | 100 | 94% | 0.92 |
-| 2 | 2 | 100 | 94% | 0.92 |
-| 1 | 2 | 100 | 91% | 0.91 |
-| 3 | 3 | 100 | 89% | 0.88 |
-
-A similar observation can be made with the word2vec graph showing the difference between the two classes, here even a linear relationship could be identified between the two classes. 
+[Go to Node2Vec](./n2v.md)
 
 ### 3.3 Metapath2vec
-[Metapath2Vec](./m2v.md)
-
-#### Introduction - 
 
 Compared to Word2Vec and Node2Vec which use homogeneous graph networks, Metapath2Vec uses heterogeneous graph networks. Heterogeneous graph networks allow us to distinguish different types of nodes and edges(relationship). In our case, using heterogeneous graph networks enable us to see the difference between API and APP nodes. 
 
 On the other hand, similar to Node2Vec, Metapath2Vec takes random walks to “construct the heterogeneous neighborhood of a node” and then uses “a heterogeneous skip-gram model to perform node embeddings.”
 
-#### Implementation - 
-
-We leveraged decisions based on the analysis from previous models for metapath2vec, allowing us to focus on scalability and the versatility of the model.
-Metapath2Vec unlike the previous models through heterogeneous walks is able to capture less biased data through chaining together multiple API’s. For the purpose of this research we focus on the native Metapath2Vec implementation and not it’s Metapath2Vec ++ implementation which adds negative sampling functionality.
-
-For metapath2vec the implementation involved selecting a random application and finding a corresponding uniformly probable API that has been found in the application. Once this is found, we extract a corresponding API from the from the column where it is found in other applications. This process of moving through the matrices with App → API relationships allows us to create meta paths. 
-
-
-#### Analysis - 
-| Meta-Path Walks | Accuracy | F1 Score |
-| -- | -- | -- |
-| APA  | 94% | 0.95 |
-| APA  | 91% | 0.91 |
-| APBPA | 83% | 0.87 |
+[Metapath2Vec](./m2v.md)
 
 ## 4. Future Research
 ### Shortcomings 
