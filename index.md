@@ -11,7 +11,10 @@ The current state of the art of Malware detection uses machine learning models b
 ## 2. Data Exploration
 ### Data Source
 
-![image](Assets/images/APK.png)
+<p float="center">
+  <img src="Assets/images/APK.png" width="90%" />
+</p>
+
 
 The applications from the Android Play Store are reduced to a version of assembly code for Java-based applications called Dalvik bytecode. The APK’s that contain the smali code are directly downloaded from ‘https://apkpure.com/’ and compiled into .smali files using the apktools library. Thus, this data is then unpackaged using the apktools library that allows us to view the subsequent smali code (a code that humans can interpret) and app binaries. The smali code and app binaries contain a lot of the information derived from the Java source code that allows us to map the number of API calls and the relationships between them. 
 
