@@ -85,7 +85,7 @@ Choice of Meta Path - Through experimentation we found disparate predictive accu
 
 Below we see an unsupervised k-means classification into clusters of the APA and APBPA walks respectively. 
 
-<p float="left">
+<p float="center">
   <img src="Assets/images/wc2.png" width="500" />
   <img src="Assets/images/wc3.png" width="500" /> 
 </p>
