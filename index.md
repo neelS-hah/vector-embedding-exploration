@@ -1,8 +1,13 @@
 | Table of Content | 
 | -- |
 | [1. Introduction](#1.-Introduction)|
-| APA  | 91% | 0.91 |
-| APBPA | 83% | 0.87 |
+| [2. Data Exploration](#2.-Data-Exploration) |
+| [3. Graph Embedding Techniques](#3.Graph-Embedding-Techniques)|
+|   [3.1 Introduction](#3.1-Word2vec)|
+|   [3.2 Node2Vec](#3.2-Node2Vec)|
+|   [3.3 Metapath2vec](#3.3-Metapath2vec)|
+| [4. Future Research](#4.-Future-Research)|
+| [5. Conclusion](#5.-Conclusion)|
 
 ## 1. Introduction 
  
