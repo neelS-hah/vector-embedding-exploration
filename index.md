@@ -2,8 +2,8 @@
 
 | Table of Content | 
 | ---------------------------------- |
-| [1. Introduction](#1.-Introduction)|
-| [2. Data Exploration](#2.-Data-Exploration) |
+| [1. Introduction](#Introduction)|
+| [2. Data Exploration](#Data-Exploration) |
 | [3. Graph Embedding Techniques](#3.Graph-Embedding-Techniques)|
 | [ -- 3.1 Introduction](#3.1-Word2vec)|
 | [ -- 3.2 Node2Vec](#3.2-Node2Vec)|
