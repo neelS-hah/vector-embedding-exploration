@@ -8,8 +8,8 @@
 | [ -- 3.1 Introduction](#31-word2vec)|
 | [ -- 3.2 Node2Vec](#32-node2Vec)|
 | [ -- 3.3 Metapath2vec](#33-metapath2vec)|
-| [4. Future Research](#4.-future-research)|
-| [5. Conclusion](#5.-conclusion)|
+| [4. Future Research](#4-future-research)|
+| [5. Conclusion](#5-conclusion)|
 
 ## 1. Introduction 
  
