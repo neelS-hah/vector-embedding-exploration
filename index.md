@@ -6,14 +6,10 @@ Are you using a Samsng, Huawei or Google phone? Are you aware that your phone is
 
 The current state of the art of Malware detection uses machine learning models built of static syntactic relationships between the codebase and corresponding API calls. 
 
-A great benchmark for models currently used is the HinDroid implementation. As other malware detection system simply use Application Programming Interface (API) calls, HinDroid further analyzes the relationship between API calls and higher-level semantics which raise the threshold for attackers A prime example of using Heterogeneous Information Network for Android Malware Detection.
-
-Hindroid is like a launguage with it's own syntax, structure, and semantics. Thus these relationships were further analyzed in order to use Natural Language Processing (NLP) techniques to further form relationships and classify Malware and Benign applications. 
-
-With the core idea to map out relationships using language models, this website explores a handful of vectorization and embedding techniques to accurately form information chains across the data. In particular, we explore Word2vec, Node2vec, and Metapath2vec in-depth and discuss other advanced implementations. 
-
 ## 2. Data Exploration
 ### Data Source
+
+![image](Assets/images/APK.png)
 
 The applications from the Android Play Store are reduced to a version of assembly code for Java-based applications called Dalvik bytecode. The APK’s that contain the smali code are directly downloaded from ‘https://apkpure.com/’ and compiled into .smali files using the apktools library. Thus, this data is then unpackaged using the apktools library that allows us to view the subsequent smali code (a code that humans can interpret) and app binaries. The smali code and app binaries contain a lot of the information derived from the Java source code that allows us to map the number of API calls and the relationships between them. 
 
@@ -52,21 +48,12 @@ Below are the three matrices and their contents.
 Based on the matrices, we explored meta path AA^T, ABA^T, APA^T, and APBP^TA^T, and used multi-kernel learning to compute the similarities.
 
 ### Reduceing API Calls
-A large part of working with API calls and their importance in App classification was to build a scalable pipeline to handle the sheer number of API calls. It was an iterative and experimental process to reduce the number of API calls whilst maintaining an average observed distance from the benchmark model described below. 
-
-To reduce the number of API calls we first attempted to use the TF-IDF vectorizer. 
-Drawbacks associated with an untuned TF-IDF was that it had a low threshold for considering an API an infrequent word.
-Since the corpus we were dealing with was relatively large, increasing the threshold to a greater value, to account for some infrequent API’s helped increase our baseline accuracy. 
-
-Finally, it was a combination of using ‘minimum document frequency’, maximum document frequency tuned in increments of 5,10,100. This along with the ‘max features’ hyperparameter, to add strict limits to the document size allowed us to modify the TF-IDF formula to accurately match our purpose. 
 
 For the project, we tested reducing the API’s used from the maximum value of 3 Million to 50,000 and then to 12,000; without sacrificing accuracy of the models ahead. 
 
 ### Benchmark Model 
 
 As a baseline model for all the subsequent research, we picked the HinDroid model. The HinDroid model leverages the Adjacency Matrices and their subsequent meta paths, as outlined above to be inputted into Support Vector Machines as custom kernels for the model. 
-
-It must be noted that the baseline model, here, is not a function of improving subsequent models - rather a comparison to gauge metrics from various techniques used ahead.
 
 ### Benchmark Performance
 | Meta-Path Walks | Walk Length | Accuracy |
@@ -75,10 +62,6 @@ It must be noted that the baseline model, here, is not a function of improving s
 | ABA^T  | 0.773315  | 0.77 |
 | APA^T | 0.983132 | 0.97 |
 | APBP^TA^T | 0.764901 | 0.77 |
-
-#### Data Considerations
-
-The data was obtained through open source technologies and through random sampling, thus the analysis is the only representative of the sample quality. The number of apps and corresponding API calls does achieve the ability to scale thus eliminating any statistical biases in analysis or conclusions. 
 
 ## 3. Graph Embedding Techniques
 Now that we’ve established base relationships across Apps and APIs through various adjacency matrices and baseline models. To better understand the relationships between API calls, and their subsequent properties we explore them through Graph Networks, their ability to learn and traverse, and the corresponding vectorized embeddings. 
@@ -120,6 +103,7 @@ Below we see the 2D representation of the vector embeddings with the benign and 
 ![image](Assets/images/w2v_act.png)
 
 ### 3.2 Node2Vec:
+[Node2Vec](./w2v.html)
 #### Introduction - 
 
 Node2vec is an algorithmic framework for representational learning on graphs. Given any graph, it can learn continuous feature representations for the nodes, which can then be used for various downstream machine learning tasks.
