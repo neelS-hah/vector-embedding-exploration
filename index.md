@@ -121,6 +121,6 @@ It is often easy to forget while analyzing and writing code, that at the end of 
 
 ## 6.Additional Information
 
-Video Link to Our Presentation: https://youtu.be/K-uCKlmn7SY
+<a href="https://BorealBlizzard.github.io/page1.html/">Video Link to Our Presentation</a>
 
 
