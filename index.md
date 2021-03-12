@@ -34,7 +34,9 @@ This is an example API call we extract and the following figure is how it is org
 Invoke−virtual {v2}, Ljava / lang / Process ;−> getInputStream ( ) Ljava/io/InputStream
 Invoke Type		API Library		API NAME		Return Type
 
-![image](Assets/images/features.png)
+<p float="center">
+  <img src="Assets/images/features.png" width="100%" />
+</p>
 
 #### API Calls
 
@@ -42,13 +44,18 @@ One of the major differences between malware and benign apps is the number of AP
 
 Below we see the quantity distribution of the most popular common API across both Malware and Benign Applications. The commonly used API calls in benign apps tend to be similar. This further allows us to create better formulas for reducing and vectorizing API calls.
 
-![image](Assets/images/api_calls.png)
+<p float="center">
+  <img src="Assets/images/api_calls.png" width="100%" />
+</p>
+
 
 #### Constructing Adjacency Matrices
 To help highlight APP → API relationships, we created 3 adjacency matrices. 
 Below are the three matrices and their contents. 
 
-![image](Assets/images/matrices.png)
+<p float="center">
+  <img src="Assets/images/matrices.png" width="100%" />
+</p>
 
 Based on the matrices, we explored meta path AA^T, ABA^T, APA^T, and APBP^TA^T, and used multi-kernel learning to compute the similarities.
 
