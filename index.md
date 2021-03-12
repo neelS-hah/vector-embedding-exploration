@@ -2,7 +2,9 @@
  
 Are you using a Samsng, Huawei or Google phone? Are you aware that your phone is 50 times more likely to be hacked than an iphone which uses and IOS system? By July 2020, Android OS is still a leading mobile operating system that holds 74.6% of the market share worldwide, attracting numerous cyber-criminals who are targeting the largest crowd. Thus, developing a strong malware detection system becomes the number one priority.
 
-![image](Assets/images/android-malware.jpeg)
+<p float="center">
+  <img src="Assets/images/android-malware.jpeg" width="100%" />
+</p>
 
 The current state of the art of Malware detection uses machine learning models built of static syntactic relationships between the codebase and corresponding API calls. 
 
@@ -99,6 +101,7 @@ For the following downstream predictive tasks we used the embeddings and a Rando
 | APBPA | 20 | 83% | 0.82 |
 
 Below we see the 2D representation of the vector embeddings with the benign and malware classes being differentiated. 
+
 
 ![image](Assets/images/w2v_act.png)
 
