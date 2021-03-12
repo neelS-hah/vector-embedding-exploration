@@ -1,6 +1,6 @@
 | Table of Content | 
 | -- |
-| [1. Introduction](# 1. Introduction)|
+| [1. Introduction](#1. Introduction)|
 | APA  | 91% | 0.91 |
 | APBPA | 83% | 0.87 |
 
