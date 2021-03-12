@@ -12,7 +12,7 @@ The current state of the art of Malware detection uses machine learning models b
 ### Data Source
 
 <p float="center">
-  <img src="Assets/images/APK.png" width="90%" />
+  <img src="Assets/images/APK.png" width="80%" />
 </p>
 
 
