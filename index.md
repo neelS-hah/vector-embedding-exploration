@@ -70,7 +70,7 @@ It must be noted that the baseline model, here, is not a function of improving s
 
 ### Benchmark Performance
 | Meta-Path Walks | Walk Length | Accuracy |
-| -- | --| - | -- |
+| -- | -- | -- |
 | AA^T  | 0.985218 | 0.97 |
 | ABA^T  | 0.773315  | 0.77 |
 | APA^T | 0.983132 | 0.97 |
@@ -153,16 +153,16 @@ On running the model and creating sentences the graph below shows the distributi
 
 Then we use k-means clustering method to classify the apps from malware to benign apps. The graph below shows the result when k = 2, k=3, and k=4.(see pics below)
 
-<p float="center">
-  <img src="/Assets/images/c2.png" width="330" />
-  <img src="/Assets/images/c3.png" width="330" /> 
-  <img src="/Assets/images/c4.png" width="330" /> 
+<p float="left">
+  <img src="Assets/images/c2.png" width="330" />
+  <img src="Assets/images/c3.png" width="330" /> 
+  <img src="Assets/images/c4.png" width="330" /> 
 </p>
 
 
 Here is the accurate plot differentiating malware from benign apps:
 
-<img src="/Assets/images/n2v_act.png" width="1000" /> 
+<img src="Assets/images/n2v_act.png" width="1000" /> 
 
 Comparing the plots, we can see that k-means clustering provides insight into the natural clusters of the graph. As all the k-means clustering separates clusters horizontally, we can assume that more than 50% of APPs are misclassified. Misclassifying malware as a benign app could cause a huge loss, so K-means clustering isn’t a good algorithm for detecting malware.
 Looking at the second graph, we see a distinct boundary between the application types. Further analysis would look at different meta paths that could better identify this boundary in addition to classifiers to elevate the creation of decision boundaries.
