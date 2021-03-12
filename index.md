@@ -1,3 +1,9 @@
+| Table of Content | 
+| -- |
+| [1. Introduction](## 1. Introduction)|
+| APA  | 91% | 0.91 |
+| APBPA | 83% | 0.87 |
+
 ## 1. Introduction 
  
 Are you using a Samsng, Huawei or Google phone? Are you aware that your phone is 50 times more likely to be hacked than an iphone which uses and IOS system? By July 2020, Android OS is still a leading mobile operating system that holds 74.6% of the market share worldwide, attracting numerous cyber-criminals who are targeting the largest crowd. Thus, developing a strong malware detection system becomes the number one priority.
