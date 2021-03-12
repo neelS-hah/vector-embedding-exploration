@@ -50,12 +50,17 @@ Below are the three matrices and their contents.
 
 Based on the matrices, we explored meta path AA^T, ABA^T, APA^T, and APBP^TA^T, and used multi-kernel learning to compute the similarities.
 
-### Baseline Model 
+### Benchmark Model 
 
 As a baseline model for all the subsequent research, we picked the HinDroid model. The HinDroid model leverages the Adjacency Matrices and their subsequent meta paths, as outlined above to be inputted into Support Vector Machines as custom kernels for the model. 
 It must be noted that the baseline model, here, is not a function of improving subsequent models - rather a comparison to gauge metrics from various techniques used ahead.
-### Baseline Performance
-(table)
+### Benchmark Performance
+| Meta-Path Walks | Walk Length | Accuracy |
+| -- | --| - | -- |
+| AA^T  | 0.985218 | 0.97 |
+| ABA^T  | 0.773315  | 0.77 |
+| APA^T | 0.983132 | 0.97 |
+| APBP^TA^T | 0.764901 | 0.77 |
 #### Data Considerations
 
 The data was obtained through open source technologies and through random sampling, thus the analysis is the only representative of the sample quality. The number of apps and corresponding API calls does achieve the ability to scale thus eliminating any statistical biases in analysis or conclusions. 
@@ -150,9 +155,14 @@ Here is the accurate plot differentiating malware from benign apps:
 Comparing the plots, we can see that k-means clustering provides insight into the natural clusters of the graph. As all the k-means clustering separates clusters horizontally, we can assume that more than 50% of APPs are misclassified. Misclassifying malware as a benign app could cause a huge loss, so K-means clustering isn’t a good algorithm for detecting malware.
 
 Looking at the second graph, we see a distinct boundary between the application types. Further analysis would look at different meta paths that could better identify this boundary in addition to classifiers to elevate the creation of decision boundaries.
-Performance of Node2Vec embeddings on pre embedding data - 
+Performance of Node2Vec embeddings  - 
 
-(table)
+|P| Q | Walk Length | Accuracy | F1 Score |
+| -- | -- | --| -- | -- |
+| 2 | 1 | 100 | 94% | 0.92 |
+| 2 | 2 | 100 | 94% | 0.92 |
+| 1 | 2 | 100 | 91% | 0.91 |
+| 3 | 3 | 100 | 89% | 0.88 |
 
 A similar observation can be made with the word2vec graph showing the difference between the two classes, here even a linear relationship could be identified between the two classes.  
 
@@ -168,7 +178,11 @@ On the other hand, similar to Node2Vec, Metapath2Vec takes random walks to “co
 We leveraged decisions based on the analysis from previous models for metapath2vec, allowing us to focus on scalability and the versatility of the model.
 
 #### Analysis - 
-(todo)
+| Meta-Path Walks | Accuracy | F1 Score |
+| -- | -- | -- |
+| APA  | 94% | 0.95 |
+| APA  | 91% | 0.91 |
+| APBPA | 83% | 0.87 |
 
 ## 4. Future Research
 There are multiple graph embedding models and techniques that go far beyond the ones explored today. Additionally, the scalability and ability to hyper optimize these embeddings their corresponding models exist to a large degree. 
