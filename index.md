@@ -81,6 +81,7 @@ Now that we’ve established base relationships across Apps and APIs through var
 ### 3.1 Word2vec:
 
 Word2Vec is one of the most popular techniques to learn word embeddings using a shallow neural network, developed by Tomas Mikolov in 2013 at Google.  Word2vec learns the association among words from a large corpus of text, and it could be used to find synonymous words or suggest an additional word for an incomplete sentence using Skip Gram or Common Bag Of Words (CBOW).
+
 [Go to Word2Vec](./w2v.md)
 
 ### 3.2 Node2Vec:

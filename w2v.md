@@ -16,8 +16,8 @@ Choice of Meta Path - Through experimentation we found disparate predictive accu
 Below we see an unsupervised k-means classification into clusters of the APA and APBPA walks respectively. 
 
 <p float="center">
-  <img src="Assets/images/wc2.png" width="100%" />
-  <img src="Assets/images/wc3.png" width="100%" /> 
+  <img src="Assets/images/wc2.png" width="300" />
+  <img src="Assets/images/wc3.png" width="300" /> 
 </p>
 
 For the following downstream predictive tasks we used the embeddings and a Random Forest Classifier different train/test sets depending on the walk lengths and their corresponding embeddings.
