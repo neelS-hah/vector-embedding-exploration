@@ -29,7 +29,9 @@ Since the risk factor for misclassifying a malware app as benign is considerably
  
 On running the model and creating sentences the graph below shows the distribution of each app from a 2D representation of the graph embeddings. A point represents an app in the graph.
 
-![image](Assets/images/n2v_indi.png)
+<p float="center">
+  <img src="Assets/images/n2v_indi.png" width="100%" />
+</p>
 
 Then we use k-means clustering method to classify the apps from malware to benign apps. The graph below shows the result when k = 2, k=3, and k=4.(see pics below)
 
@@ -42,7 +44,9 @@ Then we use k-means clustering method to classify the apps from malware to benig
 
 Here is the accurate plot differentiating malware from benign apps:
 
-<img src="Assets/images/n2v_act.png" width="1000" /> 
+<p float="center">
+  <img src="Assets/images/n2v_act.png" width="100%" />
+</p>
 
 Comparing the plots, we can see that k-means clustering provides insight into the natural clusters of the graph. As all the k-means clustering separates clusters horizontally, we can assume that more than 50% of APPs are misclassified. Misclassifying malware as a benign app could cause a huge loss, so K-means clustering isn’t a good algorithm for detecting malware.
 Looking at the second graph, we see a distinct boundary between the application types. Further analysis would look at different meta paths that could better identify this boundary in addition to classifiers to elevate the creation of decision boundaries.

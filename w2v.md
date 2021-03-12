@@ -15,9 +15,9 @@ Choice of Meta Path - Through experimentation we found disparate predictive accu
 
 Below we see an unsupervised k-means classification into clusters of the APA and APBPA walks respectively. 
 
-<p float="left">
-  <img src="Assets/images/wc2.png" width="100" />
-  <img src="Assets/images/wc3.png" width="100" /> 
+<p float="center">
+  <img src="Assets/images/wc2.png" width="100%" />
+  <img src="Assets/images/wc3.png" width="100%" /> 
 </p>
 
 For the following downstream predictive tasks we used the embeddings and a Random Forest Classifier different train/test sets depending on the walk lengths and their corresponding embeddings.
@@ -32,4 +32,6 @@ For the following downstream predictive tasks we used the embeddings and a Rando
 
 Below we see the 2D representation of the vector embeddings with the benign and malware classes being differentiated. 
 
-![image](Assets/images/w2v_act.png)
+<p float="center">
+  <img src="Assets/images/w2v_act.png" width="100%" />
+</p>
