@@ -3,13 +3,13 @@
 | Table of Content | 
 | ---------------------------------- |
 | [1. Introduction](#1-introduction)|
-| [2. Data Exploration](#data-exploration) |
-| [3. Graph Embedding Techniques](#3.Graph-Embedding-Techniques)|
-| [ -- 3.1 Introduction](#3.1-Word2vec)|
-| [ -- 3.2 Node2Vec](#3.2-Node2Vec)|
-| [ -- 3.3 Metapath2vec](#3.3-Metapath2vec)|
-| [4. Future Research](#4.-Future-Research)|
-| [5. Conclusion](#5.-Conclusion)|
+| [2. Data Exploration](#2-data-exploration) |
+| [3. Graph Embedding Techniques](#3-graph-embedding-techniques)|
+| [ -- 3.1 Introduction](#31-word2vec)|
+| [ -- 3.2 Node2Vec](#32-node2Vec)|
+| [ -- 3.3 Metapath2vec](#33-metapath2vec)|
+| [4. Future Research](#4.-future-research)|
+| [5. Conclusion](#5.-conclusion)|
 
 ## 1. Introduction 
  
