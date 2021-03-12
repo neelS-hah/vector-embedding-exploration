@@ -98,7 +98,7 @@ Compared to Word2Vec and Node2Vec which use homogeneous graph networks, Metapath
 
 On the other hand, similar to Node2Vec, Metapath2Vec takes random walks to “construct the heterogeneous neighborhood of a node” and then uses “a heterogeneous skip-gram model to perform node embeddings.”
 
-[Metapath2Vec](./m2v.md)
+[Go to Metapath2Vec](./m2v.md)
 
 ## 4. Future Research
 ### Shortcomings 
