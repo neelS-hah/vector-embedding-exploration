@@ -10,7 +10,7 @@
 | [ -- 3.3 Metapath2vec](#33-metapath2vec)|
 | [4. Future Research](#4-future-research)|
 | [5. Conclusion](#5-conclusion)|
-| [6.Additional Information](#6-additional-information)|
+| [6. Additional Information](#6-additional-information)|
 
 ## 1. Introduction 
  
@@ -77,7 +77,7 @@ Additionally, the research of adversarial models through the lens of Graph Embed
 Overall, with a balance between feasibility of scaling and implementation, we found Node2vec most versatile, allowing us to retain accurate results while forming sentences and correlations that more closely represented the class division of applications.
 It is often easy to forget while analyzing and writing code, that at the end of it all it’s still a language. Using technology and models designed for linguistic semantics and structure and using it on the binaries of a programming language and application is a meta-analysis that adequately serves its purpose. 
 
-## 6.Additional Information
+## 6. Additional Information
 
 <a href="https://BorealBlizzard.github.io/page1.html/">Video Link to Our Presentation</a>
 <a href="https://docs.google.com/document/d/1U0hxHL5boiFmCqgYs3B9EHoWOfzfpN6Px0at1zw71rI/edit">Link to Our Report</a>
