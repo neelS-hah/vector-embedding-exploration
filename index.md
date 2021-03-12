@@ -121,12 +121,6 @@ It is often easy to forget while analyzing and writing code, that at the end of 
 
 ## 6.Additional Information
 
-Video :
-<iframe src="https://youtu.be/K-uCKlmn7SY" 
-    width="560" 
-    height="315"
-    frameborder="0" 
-    allowfullscreen>
-</iframe>
+Video Link to Our Presentation: https://youtu.be/K-uCKlmn7SY
 
 
