@@ -110,7 +110,7 @@ Below we see the 2D representation of the vector embeddings with the benign and 
 ![image](Assets/images/w2v_act.png)
 
 ### 3.2 Node2Vec:
-
+[Node2Vec](./n2v.html)
 #### Introduction - 
 
 Node2vec is an algorithmic framework for representational learning on graphs. Given any graph, it can learn continuous feature representations for the nodes, which can then be used for various downstream machine learning tasks.
@@ -172,6 +172,8 @@ Performance of Node2Vec embeddings using an SVC -
 A similar observation can be made with the word2vec graph showing the difference between the two classes, here even a linear relationship could be identified between the two classes. 
 
 ### 3.3 Metapath2vec
+[Metapath2Vec](.m2v.html)
+
 #### Introduction - 
 
 Compared to Word2Vec and Node2Vec which use homogeneous graph networks, Metapath2Vec uses heterogeneous graph networks. Heterogeneous graph networks allow us to distinguish different types of nodes and edges(relationship). In our case, using heterogeneous graph networks enable us to see the difference between API and APP nodes. 
