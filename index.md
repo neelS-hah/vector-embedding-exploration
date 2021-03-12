@@ -12,7 +12,7 @@ The current state of the art of Malware detection uses machine learning models b
 ### Data Source
 
 <p float="center">
-  <img src="Assets/images/APK.png" width="80%" />
+  <img src="Assets/images/APK.png" width="100%" />
 </p>
 
 
@@ -72,7 +72,7 @@ As a baseline model for all the subsequent research, we picked the HinDroid mode
 Now that we’ve established base relationships across Apps and APIs through various adjacency matrices and baseline models. To better understand the relationships between API calls, and their subsequent properties we explore them through Graph Networks, their ability to learn and traverse, and the corresponding vectorized embeddings. 
 
 ### 3.1 Word2vec:
-[Word2Vec](./w2v.html)
+[Word2Vec](./w2v.md)
 #### Introduction - 
 
 Word2Vec is one of the most popular techniques to learn word embeddings using a shallow neural network, developed by Tomas Mikolov in 2013 at Google.  Word2vec learns the association among words from a large corpus of text, and it could be used to find synonymous words or suggest an additional word for an incomplete sentence using Skip Gram or Common Bag Of Words (CBOW).
@@ -110,7 +110,7 @@ Below we see the 2D representation of the vector embeddings with the benign and 
 ![image](Assets/images/w2v_act.png)
 
 ### 3.2 Node2Vec:
-[Node2Vec](./n2v.html)
+[Node2Vec](./n2v.md)
 #### Introduction - 
 
 Node2vec is an algorithmic framework for representational learning on graphs. Given any graph, it can learn continuous feature representations for the nodes, which can then be used for various downstream machine learning tasks.
@@ -172,7 +172,7 @@ Performance of Node2Vec embeddings using an SVC -
 A similar observation can be made with the word2vec graph showing the difference between the two classes, here even a linear relationship could be identified between the two classes. 
 
 ### 3.3 Metapath2vec
-[Metapath2Vec](.m2v.html)
+[Metapath2Vec](./m2v.md)
 
 #### Introduction - 
 
