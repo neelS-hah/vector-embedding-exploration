@@ -119,8 +119,9 @@ Additionally, the research of adversarial models through the lens of Graph Embed
 Overall, with a balance between feasibility of scaling and implementation, we found Node2vec most versatile, allowing us to retain accurate results while forming sentences and correlations that more closely represented the class division of applications.
 It is often easy to forget while analyzing and writing code, that at the end of it all it’s still a language. Using technology and models designed for linguistic semantics and structure and using it on the binaries of a programming language and application is a meta-analysis that adequately serves its purpose. 
 
-## Additional Information
-Video:
+## 6.Additional Information
+
+Video :
 <iframe src="https://youtu.be/K-uCKlmn7SY" 
     width="560" 
     height="315"
